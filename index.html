@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welinton-Rodrigues - Portfólio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="bg3d" aria-hidden="true"></canvas>
+    <header>
+        <div class="logo">Dev.Portfolio</div>
+        <button class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Abrir menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav id="primary-nav">
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="nav-backdrop" aria-hidden="true"></div>
+
+    <main>
+        <section id="hero">
+            <div class="hero-inner">
+                <div class="hero-copy">
+                    <h1>
+                        <span id="typedPrefix">Olá, eu sou </span>
+                        <span id="typedName" class="typed-name">Welinton Rodrigues</span>
+                    </h1>
+                    <p class="subtitle">Desenvolvedor Full Stack | Criando experiências digitais incríveis</p>
+                    <p>Especializado em React, TypeScript e Java SpringBoot. Apaixonado por transformar ideias em aplicações web modernas e escaláveis.</p>
+                    <div class="buttons">
+                        <a href="#projetos" class="btn btn-primary">Ver Projetos</a>
+                        <a href="#contato" class="btn btn-secondary">Fale Comigo</a>
+                    </div>
+                    <div class="social-icons">
+                        <a href="https://github.com/Welinton-Rodrigues/Welinton-Rodrigues" target="_blank"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/welinton-rodrigues-38324a1b9" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                    <div class="visual-switch" aria-label="Visual 3D">
+                        <button class="vs-btn" data-mode="particles">Partículas</button>
+                        <button class="vs-btn" data-mode="monogram">Monograma</button>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="avatar-ring">
+                        <img id="avatarImg" src="assets/mypicture.jpeg" alt="Foto de Welinton Rodrigues" class="avatar" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre">
+ aCO            <h2>Sobre <span>Mim</span></h2>
+            <p class="section-lead">Desenvolvedor Full Stack focado em soluções simples, rápidas e úteis.</p>
+            <p class="about-text">Automação com n8n, Java e JavaScript. No front, React para interfaces dinâmicas.</p>
+            <p class="about-text">Lógica + clareza → menos ruído, mais resultado. Aprendizado contínuo para gerar impacto.</p>
+            <div class="cards">
+                <div class="card">
+                    <h3>Código Limpo</h3>
+                    <p>Escrevo código limpo, bem documentado e fácil de manter</p>
+                </div>
+                <div class="card">
+                    <h3>Performance</h3>
+                    <p>Otimizo aplicações para máxima velocidade e eficiência</p>
+                </div>
+                <div class="card">
+                    <h3>Colaboração</h3>
+                    <p>Trabalho bem em equipe e comunico ideias com clareza</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="habilidades">
+            <h2>Habilidades</h2>
+            <p class="section-lead">Stack principal, qualidade e performance como prioridade.</p>
+            <div class="skills-grid">
+                <article class="skill-card">
+                    <div class="skill-header">
+                        <h3>React + TypeScript</h3>
+                        <span class="level-badge level-adv">Avançado</span>
+                    </div>
+                    <p>Interfaces responsivas e escaláveis com hooks, roteamento e estado global.</p>
+                </article>
+                <article class="skill-card">
+                    <div class="skill-header">
+                        <h3>Java + Spring Boot</h3>
+                        <span class="level-badge level-int">Intermediário/Avançado</span>
+                    </div>
+                    <p>APIs REST com JWT, validações e persistência com JPA e documentação OpenAPI.</p>
+                </article>
+                <article class="skill-card">
+                    <div class="skill-header">
+                        <h3>JavaScript (ESNext)</h3>
+                        <span class="level-badge level-adv">Avançado</span>
+                    </div>
+                    <p>Padrões modernos, desempenho no navegador e integração com serviços.</p>
+                </article>
+                <article class="skill-card">
+                    <div class="skill-header">
+                        <h3>Node.js + Express</h3>
+                        <span class="level-badge level-int">Intermediário</span>
+                    </div>
+                    <p>Integração de APIs, middlewares, autenticação e consumo de serviços externos.</p>
+                </article>
+                <article class="skill-card">
+                    <div class="skill-header">
+                        <h3>PostgreSQL</h3>
+                        <span class="level-badge level-int">Intermediário</span>
+                    </div>
+                    <p>Modelagem de dados, índices e migrações versionadas com foco em consistência.</p>
+                </article>
+                <article class="skill-card">
+                    <div class="skill-header">
+                        <h3>n8n (Automação)</h3>
+                        <span class="level-badge level-adv">Avançado</span>
+                    </div>
+                    <p>Orquestração de fluxos, integrações com APIs e webhooks, monitoramento de jobs.</p>
+                </article>
+                <article class="skill-card">
+                    <div class="skill-header">
+                        <h3>Testes (Jest/JUnit)</h3>
+                        <span class="level-badge level-int">Intermediário</span>
+                    </div>
+                    <p>Testes unitários e de integração, garantindo previsibilidade em releases.</p>
+                </article>
+                <article class="skill-card">
+                    <div class="skill-header">
+                        <h3>Clean Code & SOLID</h3>
+                        <span class="level-badge level-int">Intermediário</span>
+                    </div>
+                    <p>Boas práticas, revisões de código e padronização para manutenção e evolução.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="projetos">
+            <h2>Projetos</h2>
+            <p class="section-lead">Projetos recentes e pessoais com foco em valor prático.</p>
+            <div class="projects-galaxy" aria-label="Galáxia de projetos">
+                <span class="galaxy-hint">Clique para ver projetos</span>
+                <canvas id="projectsCanvas" aria-hidden="true"></canvas>
+            </div>
+            <div class="projects-grid projects-carousel">
+                <article class="project-card">
+                    <h3>Task List em Flutter + Firebase</h3>
+                    <ul class="tags">
+                        <li>Flutter</li>
+                        <li>Dart</li>
+                        <li>Firebase</li>
+                    </ul>
+                    <p>Aplicativo de lista de tarefas feito em Flutter, com integração ao Firebase.</p>
+                    <div class="project-actions">
+                        <a class="btn btn-primary" href="https://github.com/Welinton-Rodrigues/task-list-firebase" target="_blank" rel="noopener">Repositório</a>
+                        <a class="btn btn-secondary" href="#" aria-disabled="true" title="Demo em breve">Demo</a>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <h3>Product Service API (ERP MVP)</h3>
+                    <ul class="tags">
+                        <li>Java</li>
+                        <li>Spring Boot</li>
+                        <li>SQL Server</li>
+                        <li>Docker</li>
+                        <li>Swagger</li>
+                    </ul>
+                    <p>Microsserviço para gerenciamento de produtos (MVP de ERP), documentado com Swagger e preparado para Docker.</p>
+                    <div class="project-actions">
+                        <a class="btn btn-primary" href="https://github.com/Welinton-Rodrigues/product-service-api" target="_blank" rel="noopener">Repositório</a>
+                        <a class="btn btn-secondary" href="#" aria-disabled="true" title="Demo em breve">Demo</a>
+                    </div>
+                </article>
+                <article class="project-card">
+                    <h3>Portfólio Web (este site)</h3>
+                    <ul class="tags">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>Three.js</li>
+                    </ul>
+                    <p>Site pessoal com carrossel dinâmico, animação de galáxia e layout responsivo.</p>
+                    <div class="project-actions">
+                        <a class="btn btn-primary" href="#" aria-disabled="true" title="Repositório em breve">Repositório</a>
+                        <a class="btn btn-secondary" href="#" aria-disabled="true" title="Demo em breve">Demo</a>
+                    </div>
+                </article>
+            </div>
+            <div class="carousel-controls" aria-label="Controles do carrossel">
+                <button class="carousel-btn prev" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="carousel-btn next" aria-label="Próximo"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+            <div class="carousel-extras">
+                <button class="back-to-galaxy" aria-label="Voltar para a galáxia">Voltar à galáxia</button>
+            </div>
+        </section>
+
+        <section id="contato">
+            <h2>Contato</h2>
+            <p class="section-lead">Vamos conversar? Escolha um canal abaixo.</p>
+            <div class="contact-actions">
+                <a class="chip" href="mailto:" aria-label="Enviar e-mail"><i class="fa-solid fa-envelope"></i> E-mail</a>
+                <a class="chip" href="https://wa.me/" target="_blank" rel="noopener" aria-label="Abrir WhatsApp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                <a class="chip" href="https://www.linkedin.com/in/welinton-rodrigues-38324a1b9" target="_blank" rel="noopener" aria-label="Abrir LinkedIn"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Meu Portfólio</p>
+    </footer>
+
+    <script src="https://unpkg.com/three@0.160.0/build/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
