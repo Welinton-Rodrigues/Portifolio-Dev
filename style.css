@@ -514,6 +514,7 @@ nav a {
   .hero-copy{ text-align: left; }
   .hero-aside{ margin-top: 12px; }
   .project-card{ --desc-lines: 2; }
+  .project-card p{ display: block; -webkit-box-orient: initial; -webkit-line-clamp: initial; overflow: visible; }
 }
 @media (min-width: 1400px){
   .hero-inner{ max-width: 1200px; }
@@ -529,6 +530,7 @@ nav a {
     .buttons{ display: flex; flex-direction: column; gap: 12px; }
     .projects-grid{ grid-template-columns: 1fr; }
     .card, .project-card{ max-width: 100%; }
+    .project-card p{ display: block; -webkit-box-orient: initial; -webkit-line-clamp: initial; overflow: visible; }
     .avatar-actions{ margin-top:12px; text-align:center; }
     .avatar-upload{ color:rgba(255,255,255,0.75); font-size:0.9rem; cursor:pointer; text-decoration:underline; }
     .avatar-upload:hover{ color:#fff; }
