@@ -6,6 +6,7 @@ Portfólio estático com foco em UX responsiva, performance e manutenção simpl
 - Stack: `HTML`, `CSS`, `JavaScript` + `Three.js` (visual 3D), sem bundler.
 - Objetivos: carregamento leve, navegação clara, responsividade real, e showcase dos projetos.
 - Organização: `index.html`, `style.css`, `script.js`, `assets/` (imagens).
+- Site: https://welinton-rodrigues.github.io/Portifolio-Dev/
 
 ## Arquitetura de UI e Responsividade
 - Mobile-first com refinamentos progressivos em breakpoints.
@@ -72,10 +73,10 @@ Portfólio estático com foco em UX responsiva, performance e manutenção simpl
    - `git remote add origin https://github.com/<usuario>/portfolio.git`
    - `git push -u origin main`
 3. Habilite Pages em Settings → Pages → Deploy from a branch (branch `main`, `/root`).
+4. Link publicado: https://welinton-rodrigues.github.io/Portifolio-Dev/
 
 ## Próximos passos sugeridos
 - Otimização de imagens (WebP/AVIF) e lazy-loading.
 - Preloading seletivo de fontes; `font-display:swap`.
 - Testes de acessibilidade (axe, Lighthouse) e foco em contraste.
 - CSP básica e `rel=noopener`/`noreferrer` consistente.
-
