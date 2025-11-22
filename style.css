@@ -574,8 +574,8 @@ footer{ display:flex; justify-content:center; align-items:center; text-align:cen
   scroll-snap-stop: always;
   scroll-behavior: smooth;
   padding-block: clamp(16px, 3vw, 24px);
-  padding-inline: 0;
-  scroll-padding-inline: 0;
+  padding-inline: clamp(12px, 5vw, 24px);
+  scroll-padding-inline: clamp(12px, 5vw, 24px);
   -webkit-overflow-scrolling: touch;
   touch-action: pan-x;
   justify-content: flex-start;
@@ -602,8 +602,8 @@ footer{ display:flex; justify-content:center; align-items:center; text-align:cen
 
 /* Ajustes específicos para telas pequenas */
 @media (max-width: 680px){
-  .projects-carousel{ max-width: 100%; justify-content: flex-start; padding-inline: 0; scroll-padding-inline: 0; padding-bottom: calc(env(safe-area-inset-bottom, 0px) + clamp(16px, 6vh, 36px)); overflow-y: visible; }
-  .projects-carousel .project-card{ flex: 0 0 100%; max-width: none; min-height: auto; }
+  .projects-carousel{ max-width: 100%; justify-content: flex-start; padding-inline: clamp(12px, 5vw, 24px); scroll-padding-inline: clamp(12px, 5vw, 24px); padding-bottom: calc(env(safe-area-inset-bottom, 0px) + clamp(16px, 6vh, 36px)); overflow-y: visible; }
+  .projects-carousel .project-card{ flex: 0 0 100%; width: 100%; max-width: none; min-height: auto; }
   .carousel-controls, .carousel-extras{ margin-top: clamp(14px, 4vh, 26px); }
 }
  
