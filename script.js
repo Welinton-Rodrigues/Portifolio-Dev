@@ -508,3 +508,18 @@
     }
   });
 })();
+
+// Unifica parágrafos duplicados em project-card
+(function normalizeProjectCardParagraphs(){
+  document.addEventListener('DOMContentLoaded', function(){
+    var cards = Array.prototype.slice.call(document.querySelectorAll('article.project-card'));
+    cards.forEach(function(card){
+      var paras = Array.prototype.slice.call(card.querySelectorAll(':scope > p'));
+      if(paras.length > 1){
+        var text = paras.map(function(p){ return (p.textContent || '').trim(); }).filter(Boolean).join(' ');
+        paras[0].textContent = text;
+        for(var i=1;i<paras.length;i++){ var p = paras[i]; if(p && p.parentNode) p.parentNode.removeChild(p); }
+      }
+    });
+  });
+})();
