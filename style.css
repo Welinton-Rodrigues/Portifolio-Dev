@@ -625,10 +625,10 @@ footer{ display:flex; justify-content:center; align-items:center; text-align:cen
     background: #151a2b;
     border: 1px solid rgba(255,255,255,0.08);
     border-radius: 12px;
-    padding: 24px;
+    padding: clamp(16px, 4.8vw, 28px);
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: clamp(10px, 3.2vw, 16px);
     transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
 }
 
