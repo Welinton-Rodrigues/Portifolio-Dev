@@ -567,7 +567,7 @@ footer{ display:flex; justify-content:center; align-items:center; text-align:cen
   flex-wrap: nowrap;
   gap: 0;
   overflow-x: auto;
-  overflow-y: hidden;
+  overflow-y: visible;
   scroll-snap-type: x mandatory;
   scroll-snap-stop: always;
   scroll-behavior: smooth;
@@ -581,6 +581,8 @@ footer{ display:flex; justify-content:center; align-items:center; text-align:cen
   margin: 0 auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  overscroll-behavior-x: contain;
+  overscroll-behavior-y: none;
 }
 .projects-carousel::-webkit-scrollbar{ width: 0; height: 0; }
 .projects-carousel::-webkit-scrollbar-thumb{ background: transparent; }
@@ -598,22 +600,23 @@ footer{ display:flex; justify-content:center; align-items:center; text-align:cen
 
 /* Ajustes específicos para telas pequenas */
 @media (max-width: 680px){
-  .projects-carousel{ max-width: 100%; justify-content: flex-start; padding-inline: 0; scroll-padding-inline: 0; }
-  .projects-carousel .project-card{ flex: 0 0 100%; max-width: none; }
+  .projects-carousel{ max-width: 100%; justify-content: flex-start; padding-inline: 0; scroll-padding-inline: 0; padding-bottom: calc(env(safe-area-inset-bottom, 0px) + clamp(16px, 6vh, 36px)); overflow-y: visible; }
+  .projects-carousel .project-card{ flex: 0 0 100%; max-width: none; min-height: auto; }
+  .carousel-controls, .carousel-extras{ margin-top: clamp(14px, 4vh, 26px); }
 }
  
  /* Controles do carrossel */
- .carousel-controls{ display:flex; justify-content:center; gap:12px; margin-top: 12px; }
+.carousel-controls{ display:flex; justify-content:center; gap:12px; margin-top: clamp(12px, 4vh, 24px); position: relative; z-index: 3; }
  .carousel-btn{ background: rgba(138,43,226,.18); color:#cfd8ff; border:1px solid rgba(138,43,226,.35); padding:8px 12px; border-radius:10px; font-weight:600; cursor:pointer; }
  .carousel-btn:hover{ background: rgba(79,70,229,.22); box-shadow: 0 6px 18px rgba(79,70,229,.28); }
  /* Visibilidade dos controles conforme estado (somente com carrossel ativo) */
- #projetos .carousel-controls, #projetos .carousel-extras{ transition: opacity .4s ease, transform .4s ease; }
+#projetos .carousel-controls, #projetos .carousel-extras{ transition: opacity .4s ease, transform .4s ease; position: relative; z-index: 3; }
  #projetos:not(.show-projects) .carousel-controls,
  #projetos:not(.show-projects) .carousel-extras{ opacity:0; transform: translateY(12px); pointer-events:none; visibility:hidden; display:none; height:0; margin:0; padding:0; }
  #projetos.show-projects .carousel-controls,
  #projetos.show-projects .carousel-extras{ opacity:1; transform:none; pointer-events:auto; visibility:visible; }
  /* Botão voltar à galáxia */
- .carousel-extras{ display:flex; justify-content:center; margin-top:12px; }
+.carousel-extras{ display:flex; justify-content:center; margin-top: clamp(12px, 4vh, 24px); }
  .back-to-galaxy{ background: linear-gradient(90deg, #7c3aed, #22d3ee); color:#0b1020; font-weight:600; border:none; border-radius:999px; padding:10px 16px; cursor:pointer; box-shadow:0 6px 16px rgba(34,211,238,.25); }
  .back-to-galaxy:hover{ filter: brightness(1.05); }
 .project-card {

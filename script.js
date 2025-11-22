@@ -497,3 +497,14 @@
     });
   });
 })();
+
+(function initWhatsLink(){
+  document.addEventListener('DOMContentLoaded', function(){
+    var a = document.getElementById('waLink');
+    if(!a) return;
+    var num = a.getAttribute('data-whatsapp');
+    if(num && /^\d{10,15}$/.test(num)){
+      a.href = 'https://wa.me/' + num;
+    }
+  });
+})();
